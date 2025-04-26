@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { set } from 'lodash';
 
 const ResetPassword = () => {
 
@@ -33,7 +32,7 @@ const ResetPassword = () => {
     }
   }
 
-  const handlePaste = (e, index) => {
+  const handlePaste = (e) => {
     const paste = e.clipboardData.getData('text')
     const pasteArray = paste.split('');
     pasteArray.forEach((char, index) => {

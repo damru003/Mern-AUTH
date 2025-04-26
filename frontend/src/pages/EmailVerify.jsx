@@ -11,7 +11,7 @@ const EmailVerify = () => {
 
   axios.defaults.withCredentials = true;
 
-  const { backendUrl, isloggedin, userData, setuserData, getUserData } = useContext(AppContext);
+  const { backendUrl, isloggedin, userData, getUserData } = useContext(AppContext);
 
 
   const onSubmitHandler = async (e) => {
@@ -61,7 +61,7 @@ const EmailVerify = () => {
     }
   }
 
-  const handlePaste = (e, index) => {
+  const handlePaste = (e) => {
     const paste = e.clipboardData.getData('text')
     const pasteArray = paste.split('');
     pasteArray.forEach((char, index) => {
